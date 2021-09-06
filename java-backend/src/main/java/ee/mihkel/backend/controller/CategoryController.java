@@ -1,9 +1,7 @@
 package ee.mihkel.backend.controller;
 
 import ee.mihkel.backend.model.Category;
-import ee.mihkel.backend.model.Item;
 import ee.mihkel.backend.service.CategoryService;
-import ee.mihkel.backend.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,16 +17,16 @@ public class CategoryController {
     CategoryService categoryService;
 
     @GetMapping("category")
-    public List<Category> getItems() {
-        return categoryService.getItems();
+    public List<Category> getCategories() {
+        return categoryService.getCategories();
     }
 
     @PostMapping("category")
 
-    public String postItem(@RequestBody Item item) {
+    public String postCategory(@RequestBody Category category) {
 
         categoryService.saveCategory(category);
-        return "Ese edukalt lisatud " + category.getName();
+        return "Kategooria lisatud  " + category.getCategory();
     }
 
     // tehke serverile restart
