@@ -1,11 +1,17 @@
 import './App.css';
 import {Route} from 'react-router-dom';
-import Home from './pages/Home'
-import Cart from './pages/Cart'
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Navbar from './components/Navbar';
+import AddItem from './pages/AddItem';
+import AddCategory from './pages/AddCategory';
 
 function App() {
   return (
     <div>
+      
+      <Navbar />
+      
       <Route path='/' exact>
         <Home />
       </Route>
@@ -13,9 +19,19 @@ function App() {
         <Cart />
       </Route>
       <Route path='/add-item' exact>
-        <div>Add-item, mis pole veel valmis</div>
+        <AddItem />
       </Route>
+      {/* <Route path='/categories' exact>
+        <Categories/>
+      </Route> */}
+      <Route path='/add-category' exact>
+        <AddCategory />
+      </Route>
+      
+      
+      
     </div>
+    
   );
 }
 
