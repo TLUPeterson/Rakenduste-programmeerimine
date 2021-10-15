@@ -1,22 +1,21 @@
 .navbar {
-  background-color: #e63946;
-  height: 60px;
+  background-color: rgb(255, 216, 126);
   display: flex;
+  border-bottom:  3px solid rgb(179, 63, 76);
+  /* align-items: stretch; */
+  padding: 1% 2.5% 1%;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
   justify-content: space-between;
+  
 }
 
-.cart {
-  height: 50px;
-  margin: 5px;
-}
-
-.logo {
-  height: 70px;
-}
 
 .button {
   position: relative;
-  background-color: #457b9d;
+  background-color: rgb(179, 63, 76);
   border: none;
   font-size: 16px;
   color: #f1faee;
@@ -25,4 +24,58 @@
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+}
+
+.mainButton{
+  border: none;
+  background: none;
+  color: rgb(179, 63, 76);;
+  font-family: Copperplate, fantasy;
+
+  font-size: 60px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  justify-content:center;
+  
+}
+
+.left-menu{
+  padding: 0%;
+  border: none;
+  background: none;
+  color: rgb(179, 63, 76);;
+  font-family: Copperplate, fantasy;
+  font-size: 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  vertical-align: middle;
+}
+
+.right-menu{
+  padding: 0%;
+  border: none;
+  background: none;
+  color: rgb(179, 63, 76);;
+  font-family: Copperplate, fantasy;
+
+  font-size: 60px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: right;
+  display: flex;
+}
+
+
+.cart {
+  height: 50px;
+  margin: 5px;
+}
+
+.logo {
+  height: 70px;
 }

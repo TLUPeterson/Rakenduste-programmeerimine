@@ -4,15 +4,28 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return(
     <div className="navbar">
-      <Link to="/"> 
-        <img className="logo" src="asi.png" alt=""/>
-      </Link>
-      {/* <Link to="categories">
-        <button className="button">Vaata kategooriaid</button>
-      </Link> */}
-      <Link to="cart">
-        <img className="cart" src="shopping-cart.svg" alt=""/>
-      </Link>
+      <div id="left-menu">
+
+        <Link to="add-category">
+          <button className="left-menu">NEW CATEGORY</button>	
+        </Link>&nbsp;	&nbsp;
+
+        <Link to="add-item">
+          <button className="left-menu">NEW ITEM</button>
+        </Link>
+      </div>
+
+      <div className="mainButton">
+        <Link to="/"> 
+          <button className="mainButton">VEEBILEHT</button>
+        </Link>
+      </div>
+
+      <div className="right-menu">
+        <Link to="cart">
+          <img className="cart" src="shopping-bag.svg" alt=""/>
+        </Link>
+      </div>
       
       
     </div>

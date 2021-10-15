@@ -16,17 +16,33 @@ public class ItemController {
 
     @GetMapping("items")
     public List<Item> getItems() {
+
         return itemService.getItems();
     }
 
     @PostMapping("items")
 
-    public String postItem(@RequestBody Item item) {
+    public void  postItem(@RequestBody Item item) {
 
         itemService.saveItem(item);
-        return "Ese edukalt lisatud " + item.getName();
     }
 
+    @DeleteMapping("delete-item/{id}")
+    public List<Item> deleteItem(@PathVariable Long id) {
+        itemService.deleteItem(id);
+        return itemService.getItems();
+    }
+
+    @PostMapping("edit-item")
+    public void editItem(@RequestBody Item item) {
+        itemService.editItem(item);
+    }
+
+    @GetMapping("view-item/{id}")
+    public Item getOneItem(@PathVariable Long id) throws Exception{
+        return itemService.getOneItem(id);
+
+    }
     // tehke serverile restart
     // localhost:8080/items
 
