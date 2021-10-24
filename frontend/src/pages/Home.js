@@ -38,16 +38,12 @@ function Home(){
     return (
         <div classname="addButtons">
             <section className="addItemButton">
-            <Link to="add-item">
-                <button className="button">Lisa uus ese</button>
-            </Link>
+            <div className = "header2">Items</div>
             <ItemList items={loadedItems}/>
             </section>
             {/* <br /> */}
             <section className="addCategoryButton">
-            <Link to="add-category">
-                    <button className="button">Lisa uus kategooria</button>
-            </Link>
+            <div className = "header2">Categories</div>
             <CategoryList categories={loadedCategories} />
             </section>
         </div>

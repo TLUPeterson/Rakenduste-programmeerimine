@@ -5,3 +5,10 @@
 .addItemButton {
   float: left;
 }
+
+.header2 {
+  color: rgb(179, 63, 76);
+  font-size: 24px;
+  text-decoration: underline;
+  padding: 0.2em;
+}
