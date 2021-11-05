@@ -32,11 +32,9 @@ exports.updateItem = async (req, res) => {
 }
 
 exports.deleteItem = async (req, res) => {
+
   const { id } = req.params;
-
   const item = await Item.findOneAndDelete({ _id: id })
-
-  if (!item) res.status(404).send("No item with that id found")
-
-  res.status(200).send(`Successfully deleted the following item: \n ${item}`)
+  if (!item) res.status(404).send("Not found")
+  res.status(200).send(`deleted:  \n ${item}`)
 }
